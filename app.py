@@ -7,9 +7,16 @@ import os, uuid, base64, pytz, psutil, time, random, ssl, string, pyotp, logging
 # Créez l'application Flask
 app = Flask(__name__, template_folder='./flaskr/templates', static_folder='./flaskr/static')
 
-app.route('/')
+@app.route('/')
 def index():
     return render_template('principale.html')
+
+def login():
+    return render_template('auth/login.html')
+
+@app.route('/register')
+def register():
+    return render_template('auth/register.html')
 
 if __name__ == '__main__':
     CreateTable()
