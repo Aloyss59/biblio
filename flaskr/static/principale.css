@@ -1,0 +1,37 @@
+/* Définition du header */
+.header {
+	position: fixed; /* Pour que le header reste en haut */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px; /* Hauteur du header */
+	background-color: #c7b8eaa9; /* Background violet clair */
+	text-align: center;
+  }
+  
+  /* Définition du body */
+  .body {
+	margin-top: 50px; /* Pour laisser de l'espace pour le header */
+	display: flex; /* Pour séparer le body en deux colonnes */
+  }
+  
+/* Définition de la colonne gauche */
+.colonne-gauche {
+	position: fixed; /* Positionner la colonne gauche en absolue */
+	top: 50px; /* Décaler la colonne gauche en fonction de la hauteur du header */
+	left: 0; /* Coller la colonne gauche contre le bord gauche */
+	width: 11%; /* Largeur de la colonne gauche */
+	background-color: #f7beff41; /* Background gris clair */
+	padding: 20px 20px 20px 10px; /* Réduire l'espace gauche */
+	height: calc(100vh - 50px); /* Définir la hauteur de la colonne gauche égale à la hauteur de la page moins la hauteur du header */
+	font-size: 70%;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	overflow-y: scroll; /* Ajouter une barre de défilement vertical */
+  }
+  
+  /* Définition de la colonne droite */
+  .colonne-droite {
+	width: 80%; /* Largeur de la colonne droite */
+	padding: 20px;
+	text-align: center;
+  }
