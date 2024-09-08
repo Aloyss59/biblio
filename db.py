@@ -20,5 +20,7 @@ def CreateUser():
     con.commit()
     con.close()
 
+def Create
+
 def CreateTable():
     CreateUser()
