@@ -20,7 +20,23 @@ def CreateUser():
     con.commit()
     con.close()
 
-def Create
+def CreateProjectShip():
+    con = sqlite3.connect("DataBase.db")
+    cur = con.cursor()
+    
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS ProjectShip (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            sender_id INTEGER NOT NULL,
+            receiver_id INTEGER NOT NULL,
+            project_id INTEGER NOT NULL,
+            status DEFAULT pending NOT NULL
+        )
+    """)
+    
+    con.commit()
+    con.close()
 
 def CreateTable():
     CreateUser()
+    CreateProjectShip()
