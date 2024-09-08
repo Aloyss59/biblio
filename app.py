@@ -5,9 +5,7 @@ from db import CreateTable
 import os, uuid, base64, pytz, psutil, time, random, ssl, string, pyotp, logging
 
 # Créez l'application Flask
-# app = Flask(__name__, template_folder='./flaskr/templates', static_folder='./flaskr/static')
-app = Flask(__name__)
-
+app = Flask(__name__, template_folder='./flaskr/templates', static_folder='./flaskr/static')
 
 @app.before_first_request
 def setup_db():
