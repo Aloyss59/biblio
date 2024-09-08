@@ -30,7 +30,7 @@ def CreateProjectShip():
             sender_id INTEGER NOT NULL,
             receiver_id INTEGER NOT NULL,
             project_id INTEGER NOT NULL,
-            status DEFAULT pending NOT NULL,
+            status INTEGER DEFAULT pending NOT NULL,
             FOREIGN KEY (sender_id) REFERENCES User(id),
             FOREIGN KEY (receiver_id) REFERENCES User(id)
         )
